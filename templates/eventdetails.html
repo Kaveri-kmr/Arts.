@@ -1,0 +1,17 @@
+{% extends 'base.html' %}    
+    
+{% block body %}
+
+
+        
+        <h1>Event Venues</h1>
+        <ul class="list-group">
+            {% for Even in Event %}
+            <li class="list-group-item">{{Even.event_name}}-->
+                              {{Even.event_venue}}</li>
+            {% endfor%}
+        </ul>
+
+
+        <script src="" async defer></script>
+{% endblock body %}

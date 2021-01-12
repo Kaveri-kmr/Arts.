@@ -15,8 +15,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from arts.views import registration
+from arts.views import eventdetails
+from arts.views import registration_details,list_of_participants
+from django.conf.urls.static import static
+from .settings import STATIC_ROOT, STATIC_URL
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('registration/',registration,name="registration"),
-]
+    path('eventdetails/',eventdetails,name="eventdetails"),
+    path('',registration_details,name='registration_details'),
+    path('list/', list_of_participants,name='list_of_participants')
+    # path('list/ind',individual,name='individual')
+] + static(STATIC_URL, document_root=STATIC_ROOT)

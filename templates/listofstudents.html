@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<ul class="list-group">
+    <h1>Registered students</h1>
+    {% for regis in reg%}
+    
+    <li class="list-group-item">{{regis.name}}--> {{regis.Events}}</li>
+    {% endfor %}
+  </ul>
+
+
+{% endblock body %}

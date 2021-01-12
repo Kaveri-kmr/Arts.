@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="mid">
+<h1>Welcome to MEC Arts Fest</h1>
+<h2>Register below for individual Events</h2>
+<form  method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <!-- <input type="submit" value="Register"> -->
+    <button class="btn btn-danger">Register</button>
+    <!-- <h2>Here is the list of all registered students</h2>
+    <ol>
+        {% for regis in reg %}-->
+        <!-- <li>{{regis.name}} {{regis.Events}}</li>  -->
+        <!-- {% endfor %} -->
+    <!-- </ol> --> 
+</form>
+</div>
+{% endblock body %}
